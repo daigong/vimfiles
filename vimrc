@@ -24,7 +24,7 @@ set showmode    "show current mode down the bottom
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
-set number      "add line numbers
+"set number      "add line numbers
 set showbreak=...
 set wrap linebreak nolist
 
@@ -441,4 +441,70 @@ inoremap <Esc>B <down>
 inoremap <Esc>C <right>
 inoremap <Esc>D <left>
 
-set noballooneval
+"set noballooneval
+
+"By Rei Dai edit
+
+"启动gvim时窗口的大小
+set lines=33 columns=120
+
+"vim快捷键
+"CTRL-S 映射为保存
+map <silent> <C-S> :update<CR>
+imap <silent> <C-S> <ESC>:update<CR>
+vmap <silent> <C-S> <ESC>:update<CR>
+"CTRL-R 也为保存
+map <silent> <C-R> :update<CR>
+imap <silent> <C-R> <ESC>:update<CR>
+vmap <silent> <C-R> <ESC>:update<CR>
+"CTRL-E 映射为退出
+nmap <silent> <C-Q> <ESC>:quit<CR>
+imap <silent> <C-Q> <ESC>:quit<CR>
+vmap <silent> <C-Q> <ESC>:quit<CR>
+
+"CTRL-V 粘贴
+inoremap <C-V> <ESC>"+gPi
+"CTRL-C
+vnoremap <C-C> "+y
+
+"jj -> esc
+imap jj <ESC>
+
+"设置字体大小
+set guifont=Monaco\ 14
+"背景色
+"set background=light
+"colorscheme blackboard
+
+
+"Tab set
+"Next Tab ctrl+I
+map <silent> <C-K> <ESC>:tabn<CR>
+"P Ctrl+U
+map <silent> <C-J> <ESC>:tabp<CR>
+"New Tabs
+map <silent> <C-T> <ESC>:tabe<CR>
+
+"插件配置
+"NERDTree
+"把 F8 映射到 切换NERDTree插件
+map <F7> :NERDTreeToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
+"改变tree目录的同时改变工程的目录
+let NERDTreeChDirMode=1
+"切换窗格
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+"ctrlp 搜索路径
+let g:ctrlp_working_path_mode=0
+
+"BufExplorer 快捷键
+imap <silent> <C-b> <esc>:BufExplorer<CR>
+nmap <silent> <C-b> :BufExplorer<CR>
+
+"Rails vim
+imap <silent> <F12> <esc>:Rserver!<CR>
+nmap <silent> <F12> <esc>:Rserver!<CR>
+
+
