@@ -22,7 +22,7 @@ set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
 set incsearch   "find the next match as we type the search
-set hlsearch    "hilight searches by default
+set hlsearch   "hilight searches by default
 
 "set number      "add line numbers
 set showbreak=...
@@ -444,21 +444,27 @@ inoremap <Esc>D <left>
 "set noballooneval
 
 "By Rei Dai edit
+let mapleader=","
+let g:mapleader=","
 
 "启动gvim时窗口的大小
 set lines=33 columns=120
+
+"搜索不顯示高亮
+set nohlsearch
+"不要生成swap文件
+set noswapfile
+"缺省不产生备份文件
+set nobackup
+
 
 "vim快捷键
 "CTRL-S 映射为保存
 map <silent> <C-S> :update<CR>
 imap <silent> <C-S> <ESC>:update<CR>
 vmap <silent> <C-S> <ESC>:update<CR>
-"CTRL-R 也为保存
-map <silent> <C-R> :update<CR>
-imap <silent> <C-R> <ESC>:update<CR>
-vmap <silent> <C-R> <ESC>:update<CR>
-"CTRL-E 映射为退出
-nmap <silent> <C-Q> <ESC>:quit<CR>
+"CTRL-Q 映射为退出
+map <silent> <C-Q> <ESC>:quit<CR>
 imap <silent> <C-Q> <ESC>:quit<CR>
 vmap <silent> <C-Q> <ESC>:quit<CR>
 
