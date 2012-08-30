@@ -513,4 +513,3 @@ nmap <silent> <C-b> :BufExplorer<CR>
 imap <silent> <F12> <esc>:Rserver!<CR>
 nmap <silent> <F12> <esc>:Rserver!<CR>
 
-
