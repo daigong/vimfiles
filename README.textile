@@ -176,3 +176,13 @@ h2. Credits
 * All the cool plugins for Rails, Cucumber and more: @timpope
 * Great Command-T plugin by: Wincent
 * Hacks and some snippets: @akitaonrails
+
+
+
+#by daigong
+
+1. git clone this git
+2. git submodule update --init
+3. git://github.com/asux/snipmate-snippets.git  #cd vimconf/snippent  发现snippent没有被git更新，应该是bug后续解决
+4. ln your .vimrc to my .vimrc
+3. ln your .vimrc to  my .vimrc
